@@ -1,0 +1,28 @@
+<nav class="navbar">
+  <!-- Logo (izquierda) -->
+  <div class="navbar-logo">
+    <a routerLink="/inicio">DIFUMINA2</a> <!-- Texto o <img> para logo -->
+  </div>
+
+  <!-- Menú (centro) -->
+  <div class="navbar-menu">
+    <ul class="menu-items">
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.path" routerLinkActive="active">{{ item.text }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Inicio de sesión (derecha) -->
+  <div class="navbar-auth">
+    <button class="login-btn">Iniciar sesión</button>
+  </div>
+</nav>
+
+<!-- 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="navbar__auth">
+  <button class="auth-button">
+    <i class="material-icons">account_circle</i> Requiere Material Icons 
+  </button>
+</div> -->

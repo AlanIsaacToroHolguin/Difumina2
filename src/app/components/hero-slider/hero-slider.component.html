@@ -1,0 +1,17 @@
+<div class="swiper-container" #swiperContainer>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let slide of slides">
+      <img [src]="slide.image" [alt]="slide.title">
+      <div class="caption">
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.subtitle}}</p>
+      </div>
+    </div>
+  </div>
+  <!-- Agregamos la paginación -->
+  <div class="swiper-pagination"></div>
+  
+  <!-- Agregamos los botones de navegación -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

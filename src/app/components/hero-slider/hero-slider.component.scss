@@ -1,0 +1,48 @@
+// Importaciones de CSS de Swiper
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+// Estilos personalizados
+.swiper-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  height: 70vh; // Esto hará que el slider ocupe el 70% de la altura visible
+  min-height: 500px; // Para asegurar una altura mínima en pantallas pequeñas
+
+
+}
+
+.swiper-slide {
+  position: relative;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+// Ajustes de botones de navegación
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  &:after {
+    font-size: 20px;
+  }
+}
