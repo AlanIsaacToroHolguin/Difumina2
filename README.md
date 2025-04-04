@@ -1,59 +1,33 @@
 # Difumina2Project
 
+One of my main projects at SENA is DIFUMINA2, aimed at giving my rock band an online presence. I first focused on documentation, diagrams, database planning, and defining the tech stack, as a software analyst must plan from scratch, not just code. Now, with that foundation set, I've created the repository to organize and update development.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
 ## Development server
 
-To start a local development server, run:
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Project Structure
+
+- **Frontend**: Angular 19
+- **Backend**: (Especifica tu tecnología backend aquí)
+- **Database**: (Menciona tu base de datos)
+
+## Key Features
+
+1. (Describe las características principales de tu proyecto)
+2. (Por ejemplo: "Sistema de gestión para bandas musicales")
+3. (O "Plataforma de venta de entradas")
+
+## Development Setup
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Build for production
 ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
