@@ -1,0 +1,172 @@
+.rock-footer {
+    background: rgb(218, 208, 215);;
+    color: rgb(218, 208, 215);
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem 0 0;
+    border-top: 3px solid #000000;
+  
+    .footer-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  
+    .section-title {
+      color: rgb(0, 0, 0);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+      font-family: 'Freeman', sans-serif;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 2px;
+        background: rgba(143, 68, 153, 0.966); //MORADO
+      }
+    }
+  
+    /* Sección Redes Sociales */
+    .social-section {
+      .social-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        font-family: 'Freeman', sans-serif;
+  
+        .social-link {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: #000000;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          padding: 0.5rem;
+          border-radius: 4px;
+  
+          fa-icon {
+            color: rgba(143, 68, 153, 0.966); //MORADO
+            font-size: 1.2rem;
+          }
+  
+          &:hover {
+            background: rgba(189, 176, 190, 0.966);
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+  
+    /* Sección Newsletter */
+    .newsletter-section {
+      p {
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        font-family: 'Freeman', sans-serif;
+      }
+  
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+  
+        .email-input {
+          padding: 0.8rem;
+          background: rgb(165, 163, 163);
+          border: 1px solid #333;
+          color: #1e1e1e;
+          border-radius: 4px;
+        }
+  
+        .subscribe-btn {
+          background: #000000;
+          color: rgb(218, 208, 215);
+          border: none;
+          padding: 0.8rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+          font-family: 'Freeman', sans-serif;
+          &:hover {
+            background: rgba(143, 68, 153, 0.966);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  
+    /* Sección Enlaces */
+    .links-section {
+      .links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        font-family: 'Freeman', sans-serif;
+  
+        a {
+          color: #aaa;
+          text-decoration: none;
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+          padding: 0.3rem 0;
+  
+          &:hover {
+            color: rgba(143, 68, 153, 0.966);
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  
+    /* Footer Inferior */
+    .footer-bottom {
+      margin-top: 2rem;
+      padding: 1.5rem 2rem;
+      background: #0f0f0f;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+  
+      .band-logo {
+        img {
+          height: 40px;
+          filter: brightness(0) invert(1);
+          opacity: 0.8;
+        }
+      }
+  
+      .copyright {
+        p {
+          margin: 0.2rem 0;
+          font-size: 0.8rem;
+          color: #666;
+        }
+      }
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .rock-footer {
+      .footer-sections {
+        grid-template-columns: 1fr;
+      }
+  
+      .social-grid, .links-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }

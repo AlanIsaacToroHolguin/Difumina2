@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  standalone: true, // ✔️ Añade esto
+  standalone: true,
   selector: 'app-navbar',
-  imports: [CommonModule, RouterLink], // ✔️ Añade módulos necesarios
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
@@ -17,4 +17,11 @@ export class NavbarComponent {
     { text: 'Contacto', path: '/contacto' },
     { text: 'Tienda', path: '/tienda' }
   ];
-}
+  
+  isMenuActive = false;
+  
+  toggleMenu() {
+    this.isMenuActive = !this.isMenuActive;
+  }
+}          
+

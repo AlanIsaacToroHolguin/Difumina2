@@ -22,21 +22,22 @@ export class HeroSliderComponent implements AfterViewInit {
     {
       image: 'assets/slides/Difumina2nico.jpg',
       title: 'Bienvenido',
-      subtitle: 'Texto descriptivo aquí'
+      subtitle: 'Revive la energía de nuestro último concierto en vivo - 2025'
     },
     {
-      image: 'assets/slides/people1.jpg',
-      title: 'Bienvenido',
-      subtitle: 'Texto descriptivo aquí'
-    },{
-      image: 'assets/slides/Difumina2nico2.jpg',
-      title: 'Bienvenido',
-      subtitle: 'Texto descriptivo aquí'
+      image: 'assets/slides/Difumina2barnaby4.jpg',
+      title: 'Festival Obsian IV',
+      subtitle: 'Un momento inolvidable donde todo comenzó a brillar'
     },
     {
       image: 'assets/slides/people2.jpg',
-      title: 'Bienvenido',
-      subtitle: 'Texto descriptivo aquí'
+      title: 'Público',
+      subtitle: 'Nuestra mayor inspiración: ustedes, quienes nos hacen vibrar'
+    },
+    {
+      image: 'assets/slides/Rutacosmica.jpg',
+      title: 'Nuestro primer álbum',
+      subtitle: 'Sumérgete en el viaje sonoro de *Ruta Cósmica*'
     }
   ];
   
@@ -51,7 +52,7 @@ export class HeroSliderComponent implements AfterViewInit {
       this.swiper = new Swiper(this.swiperContainer.nativeElement, {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 1,
-        spaceBetween: 30,
+        spaceBetween: 35,
         loop: true,
         pagination: {
           el: '.swiper-pagination',

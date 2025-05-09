@@ -5,6 +5,17 @@
 
 /* You can add global styles to this file, and also import other style files */
 /* Global styles */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Spice&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Bungee+Spice&family=Freeman&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -32,4 +43,111 @@ body {
 
 .swiper-button-next, .swiper-button-prev {
   position: absolute !important;
+}                                                                                 
+
+
+/* Colores principales */
+:root {
+  --main-bg-color: #0f0f0f;
+  --secondary-bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --accent-color: #c00000; /* Rojo para acentos */
+  --metal-gradient: linear-gradient(135deg, #636363 0%, #b4b4b4 50%, #636363 100%);
 }
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de navegación */
+.navbar {
+  background-color: var(--secondary-bg-color);
+  border-bottom: 1px solid #333;
+  padding: 0.5rem 2rem;
+}
+
+.navbar-brand {
+  font-family: 'Metal Mania', cursive; /* Fuente estilo metal */
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  
+  &:hover {
+    color: var(--accent-color) !important;
+  }
+}
+
+/* Secciones */
+.section-header {
+  font-family: 'Metal Mania', cursive;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Botones */
+.btn-metal {
+  background: var(--metal-gradient);
+  color: var(--text-color);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s;
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+}                                                                                                      
+   :root {
+  --container-width-sm: 100%;
+  --container-width-md: 90%;
+  --container-width-lg: 1140px;
+  --main-padding-mobile: 1rem;
+  --main-padding-desktop: 2rem;
+} 
+
+.freeman {
+  font-family: 'Freeman', sans-serif;
+}
+ 
+
+.login-btn {
+  font-family: 'Freeman', sans-serif;
+  background: none;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}
+
+
+.navbar-logo {
+  font-size: 28px;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
