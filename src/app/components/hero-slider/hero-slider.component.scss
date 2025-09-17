@@ -45,4 +45,10 @@
   &:after {
     font-size: 20px;
   }
-}                               
+}
+
+// Ajuste de z-index para la paginación de Swiper
+.swiper-pagination {
+  z-index: 1;
+  position: relative;
+}
