@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Importar Swiper con la versión específica que tienes
@@ -15,8 +15,9 @@ Swiper.use([Navigation, Pagination, Autoplay]);
   styleUrls: ['./hero-slider.component.scss']
 })
 export class HeroSliderComponent implements AfterViewInit {
-  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
-  swiper: Swiper;
+  @ViewChild('swiperContainer', { static: false }) swiperContainer!: ElementRef;
+  swiper: Swiper | null = null;
+  constructor(private cdr: ChangeDetectorRef) {}
   
   slides = [
     {
@@ -42,13 +43,31 @@ export class HeroSliderComponent implements AfterViewInit {
   ];
   
   ngAfterViewInit() {
-    // Inicializar Swiper después de que el componente se renderiza
-    this.initSwiper();
+    // Forzar detección de cambios para asegurar que el DOM esté listo
+    this.cdr.detectChanges();
+    setTimeout(() => {
+      this.initSwiper();
+    }, 0);
   }
   
-  private initSwiper() {
-    // Asegúrate de que el elemento existe antes de inicializar
+  private initSwiper(retryCount: number = 0) {
+    // Destruir instancia previa si existe
+    if (this.swiper) {
+      this.swiper.destroy(true, true);
+      this.swiper = null;
+    }
+    // Inicializar Swiper solo si el contenedor existe
     if (this.swiperContainer && this.swiperContainer.nativeElement) {
+      // Verificar que los botones de navegación existen en el DOM
+      const nextBtn = document.querySelector('.swiper-button-next');
+      const prevBtn = document.querySelector('.swiper-button-prev');
+      if (!nextBtn || !prevBtn) {
+        // Si no existen, reintentar hasta 5 veces con un pequeño delay
+        if (retryCount < 5) {
+          setTimeout(() => this.initSwiper(retryCount + 1), 100);
+        }
+        return;
+      }
       this.swiper = new Swiper(this.swiperContainer.nativeElement, {
         modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 1,
